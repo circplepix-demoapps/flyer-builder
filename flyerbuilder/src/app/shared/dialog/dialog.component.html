@@ -1,0 +1,14 @@
+
+<div class="dialog-container">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"><h2>{{ title }}</h2></div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"><p>{{ caption }}</p></div>
+    <div class="mdc-layout-grid">
+        
+
+        <div id="close-dialog-container"class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <a md-icon-button (click)="dialogRef.close()" >
+            <i class="material-icons">close</i> {{ close_text }}
+            </a>
+        </div>
+    </div>
+</div>

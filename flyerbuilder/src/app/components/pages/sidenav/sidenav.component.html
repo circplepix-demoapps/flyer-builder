@@ -1,0 +1,10 @@
+<nav>
+   <md-toolbar><span>Elements</span></md-toolbar>
+   <div *ngIf="sidebar_elements" class="mdc-layout-grid">
+      <div *ngFor="let element of sidebar_elements" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+         <a md-button class="{{ element.class }} btn-elements" routerLink="." title="Drag inside the ruler">
+            <i class="material-icons">{{ element.icon }}</i> <span class="btn-elements-text">{{ element.name }}</span>
+          </a>
+      </div>
+   </div>
+</nav>

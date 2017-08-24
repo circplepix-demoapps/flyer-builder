@@ -1,0 +1,23 @@
+.mat-dialog-container {
+    overflow: hidden;    
+}
+
+.dialog-container {
+    background: #eee;
+    border:2px #CCC dashed;
+    height:100%;
+    width: 100%;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#close-dialog-container {
+    position: relative;
+    top: 145px;
+    color: red;
+    left: -105px;
+}
+
+#close-dialog-container:hover {
+    color: #f66378;
+} 

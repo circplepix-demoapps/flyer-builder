@@ -1,0 +1,685 @@
+/* ====================================================================================
+   component CSS
+======================================================================================= */
+
+.main {
+-webkit-transition: margin-left .3s;
+transition: margin-left .3s;
+position: relative;
+top:73px;
+left:5px;
+overflow: hidden;
+}
+
+.sidenav-active .main {
+   margin-left: 200px; 
+}
+
+#drg-flyer {
+   position:absolute;
+   background-image: url(../../../../assets/img/TEST_BLANK.jpg); 
+   background-repeat: no-repeat;
+   background-size:     cover;         
+}
+
+#wrapper {
+   overflow: scroll;
+   height: calc(100vh - 79px);
+   width: calc(100vw - 460px);
+   border-top:thin #999 solid;
+   border-right:thin #999 solid;
+   border-bottom:thin #999 solid;
+   z-index: -1;
+}
+
+.highlight-wrapper {
+   border: thin red dashed !important;
+}
+
+.flyer-element {
+   position:absolute !important;
+   z-index: 1;
+   top:1px;
+   left:1px;
+   height:auto;
+}
+
+.flyer-element-stills {
+   position:absolute;
+   height: 250px;
+   width: 250px;
+   background-image: url(../../../../assets/img/default-still.jpg);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-static {
+   position:absolute;
+   height: 150px;
+   width: 450px;
+   background: transparent url(../../../../assets/img/default-static.gif);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-agent {
+   position:absolute;
+   height: 125px;
+   width: 85px;
+   background: transparent url(../../../../assets/img/default-agent-pic.png);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-logo {
+   position:absolute;
+   height: 97px;
+   width: 209px;
+   background: transparent url(../../../../assets/img/default-logo.png);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-realtor {
+   position:absolute;
+   height: 57px;
+   width: 50px;
+   background: transparent url(../../../../assets/img/default-realtor.png);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-eho {
+   position:absolute;
+   height: 57px;
+   width: 50px;
+   background: transparent url(../../../../assets/img/default-eho.png);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-qr {
+   position:absolute;
+   height: 84px;
+   width: 84px;
+   background: transparent url(../../../../assets/img/default-qr.png);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-bullet {
+   position:absolute;
+   height: 15px;
+   width: 15px;
+   background: transparent url(../../../../assets/img/default-bullet.png);
+   background-repeat: no-repeat;
+   background-size:     cover;          
+   background-position: center center;
+   text-align: center;
+}
+
+.flyer-element-stills.selected-element,
+.flyer-element-blank.selected-element,
+.flyer-element-text.selected-element,
+.flyer-element-static.selected-element,
+.flyer-element-agent.selected-element,
+.flyer-element-logo.selected-element,
+.flyer-element-realtor.selected-element,
+.flyer-element-eho.selected-element,
+.flyer-element-qr.selected-element,
+.flyer-element-bullet.selected-element {
+   box-shadow: inset 0px 0px 0px 2px #e44d53;
+}
+
+.flyer-element-blank {
+   height: 792px;
+   width: 612px;
+   z-index: 1;
+}
+
+.flyer-element-text {
+   background: transparent;
+   padding:0 0 0 15px;
+   border: none;
+   min-width: 150px;
+   height: 20px;
+   min-height:20px;
+   max-height: 20px;
+}
+
+.flyer-element-text input {
+   width:100%; 
+   height:100%; 
+   background: transparent !important; 
+   border: thin #999 solid;
+}
+
+.flyer-element-textarea {
+   background: transparent;
+   padding:0 0 0 15px;
+   border: none;
+   width: 180px;
+   height: auto;
+}
+
+.flyer-element-textarea textarea {
+   width:100%; 
+   height:100%; 
+   background: transparent !important; 
+   border: thin #999 solid;
+}
+
+.flyer-element-text.selected-element {
+   box-shadow: none;
+}
+
+textarea[name=flyer-element-textarea] {
+   resize: none;
+}
+
+.segrip {
+   width: 5px;
+   height: 5px;
+   background-color: #ffffff;
+   border: 1px solid #CCC;
+   bottom: -5px;
+   right:-5px;
+}
+
+.flyer-element-textarea.segrip {
+   bottom: 1px !important;
+   right: -11px !important;
+}
+
+.tilt-draggables {
+   -webkit-backface-visibility: hidden;
+   -webkit-transform-style: preserve-3d; 
+   -ms-transform: rotate(5deg);
+   -webkit-transform: rotate(5deg);
+   transform: rotate(5deg);
+}
+
+.zindex-top {
+   z-index: 99 !important;
+}
+
+.ui-widget-content {
+   border:none;
+}
+
+#right-nav .mat-input-placeholder {
+   padding-left:25px;
+}
+
+#right-nav .icon-float-left {
+   position: absolute; 
+   top: -2px; 
+   left: -5px;
+   color:#888 !important;
+}
+
+#right-nav .input-icon {
+   padding-left:20px  !important;
+}
+
+.input-props {
+   padding-top:10px !important;
+}
+
+.input-props .material-icons {
+   font-size: 21px;
+   color:#999;
+}
+
+.input-props .mat-input-element {
+   color:#000;
+}
+
+#right-nav .mat-input-underline {
+   margin-left:20px ;
+   margin-right:20px ;
+   width: 85% !important;
+}
+
+.drg-input-icon {
+   position: absolute;
+   top: 1px;
+   left: -10px;
+   color: #018c57;
+}
+
+.input-props {
+   border-bottom:thin #CCC solid;
+   padding-left: 5px;
+}
+
+.prop-outer-container {
+   overflow-y: scroll;
+   height: calc(100vh - 420px);
+}
+
+.prop-inner-container {
+   height:100vh;
+}
+
+.btn-build-pdf {
+   position: relative !important;
+   width: 100% !important;
+   background: #faa824 ;
+   color:#FFF !important;
+}
+
+.build-flyer-container {
+   background: #f9f9f9;
+}
+
+.build-flyer-container .mat-button {
+   padding:2px !important;
+   width: 215px;
+   max-width: 215px;
+   min-width: 215px;
+}
+
+.still-ordinal {
+   font-size:220px;
+   color:#FFF;
+   font-weight: bold;
+   text-shadow: 2px 2px 3px #111;
+}
+
+#select-flyer-layout {
+   width: 90%;
+   margin: 0 15px 5px 15px;
+}
+
+.mat-form-field {
+   width:auto !important;
+}
+
+/* ====================================================================================
+   SIDEBAR LEF NAV CSS
+======================================================================================= */
+nav .mat-toolbar-row {
+   height: 50px !important;
+}
+
+nav .mat-toolbar {
+   min-height: 50px !important;
+   background: #018c57;
+   color:#FFF;
+   border-bottom: thin #ddd solid;
+   z-index: -1 !important;
+   position: relative;
+}
+
+
+nav .mat-tab-body-wrapper {
+   height:100vh;
+}
+
+nav .mat-ink-bar {
+   background-color: #FFF !important;
+}
+
+nav .mat-tab-label {
+   min-width: 90px !important;
+   color:#FFF !important;
+}
+
+nav {
+   background-color: #018c57;
+   display: inline-block;
+   position: fixed;
+   height: 92.1vh;
+   width: 200px;
+   left: -198px;
+   -webkit-transition: -webkit-transform 0.3s;
+   transition: transform 0.3s;
+   top:73px;
+}
+
+nav .mat-button {
+   color:#FFF !important;
+}
+
+nav .mat-button:hover {
+   background:transparent !important;
+}
+
+nav .icon > i {
+   display: block;
+   margin: 0 auto;
+}
+
+nav .tool-card {
+   width:200px;
+}
+
+nav a {
+   display: block;
+   text-decoration: none;
+   text-align: center;
+   color: black;
+   padding: 5px 0;
+}
+
+nav a:hover { background-color: #FFF; }
+
+nav a:visited { color: black; }
+
+nav a.active {
+   background-color: black;
+   color: white;
+}
+
+nav, .hamburger, .cover {
+   -webkit-transition: -webkit-transform .3s;
+   transition: transform .3s;
+}
+
+.sidenav-active nav, .sidenav-active .hamburger, .sidenav-active .cover {
+   -webkit-transform: translateX(200px);
+   -ms-transform: translateX(200px);
+   transform: translateX(200px);
+}
+
+/* ====================================================================================
+   RIGHT NAV CSS
+======================================================================================= */
+#right-nav {
+   width: 245px;
+   position: absolute;
+   left: calc(100vw - 250px);
+   z-index: 3;
+   top: 73px;
+   color:#666;
+   height: 92.1vh;
+   padding: 0 !important;
+   overflow: hidden;
+}
+
+#right-nav button .material-icons {
+   font-size: 16px !important;
+   color:#999;
+}
+
+.right-nav-container {
+   padding-left:15px;
+   padding-right:15px;
+   padding-top: 20px;
+   background: #f9f9f9;
+}
+
+#right-nav .mat-toolbar-row {
+   height: 50px !important;
+}
+
+#right-nav .mat-toolbar {
+   min-height: 50px !important;
+   background: #eee;
+   color:#666;
+   border-top:thin #CCC solid;
+}
+
+#right-nav hr {
+   margin-top: 20px;
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid #ccc;
+   padding: 0; 
+}
+
+#set-coord .material-icons {
+   color:#FFF !important;
+}
+
+.still-property, .text-property, .flyer-property {
+   display: none;
+}
+
+.still-property a, .text-property a {
+   width: 100%;
+   text-align: left;
+}
+
+
+/* ====================================================================================
+   RULER CSS
+======================================================================================= */
+.rsf-ruler .stage {
+   width: 100vw;
+   height: 100vh;
+} 
+
+.rsf-ruler {
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 2000px;
+   height: 2000px;
+   padding:19px 19px 0 19px;
+}
+
+.rsf-ruler .corner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 18px;
+   height: 18px;
+   background-color: #fff;
+   border-width: 0 1px 1px 0;
+   border-style: solid;
+   border-color: #000;
+}
+
+.rsf-ruler .ruler {
+   background: none repeat scroll 0% 0% #FFF;
+   color: #444;
+   font-family: source code pro, "Arial Narrow", "Helvetica Neue", Helvetica, Arial, Veranda, sans-serif;
+   font-size: 9px;
+   line-height: 14px;
+   overflow: hidden;
+   z-index: 1;
+   /* Disable select */
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.rsf-ruler .top-arrow {
+   position: absolute;
+   top: 5px;
+   left: 0;
+   width: 0;
+   height: 0;
+   border-left: 6px solid transparent;
+   border-right: 6px solid transparent;
+   border-top: 6px solid #000;
+   z-index: 3;
+}
+
+.rsf-ruler .top-line {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 18px;
+   border-left: 1px solid #000;
+   z-index: 3;
+}
+
+.rsf-ruler .left-arrow {
+   position: absolute;
+   top: 0;
+   left: 5px;
+   width: 0;
+   height: 0;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   border-left: 6px solid #000;
+   z-index: 3;
+}
+
+.rsf-ruler .left-line {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 18px;
+   height: 0;
+   border-top: 1px solid #000;
+
+   z-index: 3;
+}
+
+.rsf-ruler .tick {
+   background: none repeat scroll 0% 0% #444;
+}
+
+.rsf-ruler .top {
+   position: absolute;
+   top: 0;
+   left: 18px;
+   height: 18px;
+   border-bottom: 1px solid #000;
+}
+
+.rsf-ruler .top .major {
+   position: absolute;
+   top: 0;
+   width: 1px;
+   height: 100%;
+   text-indent: 1px;
+}
+
+.rsf-ruler .top .minor {
+   position: absolute;
+   bottom: 0px;
+   width: 1px;
+   height: 6px;
+}
+
+.rsf-ruler .top .micro {
+   position: absolute;
+   bottom: 0px;
+   width: 1px;
+   height: 4px;
+}
+
+.rsf-ruler .left {
+   position: absolute;
+   top: 18px;
+   left: 0;
+   width: 18px;
+   border-right: 1px solid #000;
+}
+
+.rsf-ruler .left .major {
+   position: absolute;
+   right: 0;
+   height: 1px;
+   width: 100%;
+   text-indent: 1px;
+}
+
+.rsf-ruler .left .major span {
+   display: block;
+   position: absolute;
+   top: 1px;
+   right: 0;
+   margin-right: 18px;
+
+   -webkit-transform: rotate(-90deg);
+   -moz-transform: rotate(-90deg);
+   -ms-transform: rotate(-90deg);
+   -o-transform: rotate(-90deg);
+   transform: rotate(-90deg);
+
+   -webkit-transform-origin: right top 0px;
+   -moz-transform-origin: right top 0px;
+   -ms-transform-origin: right top 0px;
+   -o-transform-origin: right top 0px;
+   transform-origin: right top 0px;
+}
+
+.rsf-ruler .left .minor {
+   position: absolute;
+   right: 0px;
+   height: 1px;
+   width: 6px;
+}
+
+.rsf-ruler .left .micro {
+   position: absolute;
+   right: 0px;
+   height: 1px;
+   width: 4px;
+}
+
+.rsf-ruler .stage {
+   position: absolute;
+   top: 18px;
+   left: 18px;
+   /* width: auto;
+   height: auto; */
+}
+
+/* =============================================================================
+MEDIA QUERRIES
+============================================================================= */
+
+@media only screen and (max-width: 320px) {
+   /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media only screen and (max-width: 480px) {
+   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media only screen and (max-width: 768px) {
+   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media only screen and (max-width: 992px) {
+   /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media only screen and (max-width: 1024px) {
+   /* big landscape tablets, laptops, and desktops */
+}
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (min-width: 1600px) {
+   /* hi-res laptops and desktops */
+}
+
+@media only screen and (max-width: 1599px) { /* custom */
+
+}
+
+@media only screen and (max-width: 1400px) { /* custom */
+
+}
+
+@media only screen and (max-width: 1300px) { /* custom */
+
+}
+
+@media only screen and (max-width: 1200px) { /* custom */
+
+}

@@ -1,0 +1,53 @@
+ai-header {
+   background-color: #666;
+}
+
+h3 {
+   margin-top: 12px;
+   margin-bottom: 0;
+}
+
+.header-container {
+   padding-left: 20px !important;
+   position: fixed;
+   margin-top: 0;
+   top: 0;
+   width: 100%;
+   background: #FFF;
+   z-index: 999;
+   height: 70px;
+   border-bottom:4px solid #faa824 !important;
+   min-width: 480px;
+}
+
+.notes {
+   font-size: 16px;
+   color:#999;
+   font-weight: normal;
+}
+
+.settings-icon {
+   font-size:48px !important; 
+   color:#999 !important;
+}
+
+.notification-icon {
+   font-size:48px !important; 
+   color:#999 !important;
+}
+
+#btn-settings {
+   float:right !important; 
+   padding: 10px !important;
+}
+
+#btn-notification {
+   float:right !important; 
+   padding: 10px !important;
+}
+
+#settings-container {
+   text-align: right !important;
+   padding-right: 10px;
+   padding-top: 10px;
+}
