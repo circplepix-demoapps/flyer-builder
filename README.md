@@ -13,19 +13,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. Go to the directory flyer-builder/flyer-builder.
 3. Run the following commands
 
-  ```bash
-   npm cache clean
- ```
- if you encountered some errors, you can type the command above with ```--Force``` 
+   ```bash
+    npm cache clean
+   ```
+  if you encountered some errors, you can type the command above with ```--Force``` 
 
- ```bash
-   npm install --save-dev @angular/cli@latest
-   npm install
- ```
+   ```bash
+     npm install --save-dev @angular/cli@latest
+     npm install
+   ```
 
 4. You can now run the app
- ```bash
-  ng serve
- ``` 
+   ```bash
+     ng serve
+   ``` 
 
 
