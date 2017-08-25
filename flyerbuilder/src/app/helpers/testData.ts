@@ -9,6 +9,7 @@ export class TestData {
       { 'name': 'Still', 'class': 'drp-flyer-element drp_stills ui-draggable ui-draggable-handle', 'icon': 'photo' },
       { 'name': 'Text', 'class': 'drp-flyer-element drp_text ui-draggable ui-draggable-handle', 'icon': 'title' },
       { 'name': 'Textarea', 'class': 'drp-flyer-element drp_textarea ui-draggable ui-draggable-handle', 'icon': 'text_fields' },
+      { 'name': 'Text2', 'class': 'drp-flyer-element ui-draggable drp_textarea2 ui-draggable-handle', 'icon': 'text_fields' },
       { 'name': 'Static', 'class': 'drp-flyer-element drp_static ui-draggable ui-draggable-handle', 'icon': 'crop_square' },
       { 'name': 'Agent Picture', 'class': 'drp-flyer-element drp_agent_pic ui-draggable ui-draggable-handle', 'icon': 'portrait' },
       { 'name': 'Logo', 'class': 'drp-flyer-element drp_logo ui-draggable ui-draggable-handle', 'icon': 'wallpaper' },

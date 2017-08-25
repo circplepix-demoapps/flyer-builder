@@ -85,6 +85,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       this.sidebar.draggable($('.drp_stills'), ConfigConstant.STILL_HTML);
       this.sidebar.draggable($('.drp_text'), ConfigConstant.TEXT_HTML);
       this.sidebar.draggable($('.drp_textarea'), ConfigConstant.TEXTAREA_HTML);
+      this.sidebar.draggable($('.drp_textarea2'), ConfigConstant.TEXTAREA2_HTML);
       this.sidebar.draggable($('.drp_static'), ConfigConstant.STATIC_HTML);
       this.sidebar.draggable($('.drp_agent_pic'), ConfigConstant.AGENT_HTML);
       this.sidebar.draggable($('.drp_logo'), ConfigConstant.LOGO_HTML);
