@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule, MdButtonModule, MdTabsModule, MdSelect, MdOption, MdInputModule } from '@angular/material';
 
 import 'hammerjs';
+import { ComplexTextareaComponent } from './components/elements/complex-textarea/complex-textarea.component';
 
 const rootRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,7 +37,7 @@ const rootRoutes: Routes = [
       
       RouterModule.forRoot(rootRoutes),
    ],
-   declarations: [ AppComponent, HomeComponent, SidenavComponent, HeaderComponent, PDFPreviewer, SafePipe ],
+   declarations: [ AppComponent, HomeComponent, SidenavComponent, HeaderComponent, PDFPreviewer, SafePipe, ComplexTextareaComponent ],
    providers: [ PDFGenerator, FlyerLocalStorage ],
    bootstrap: [ AppComponent ]
 })

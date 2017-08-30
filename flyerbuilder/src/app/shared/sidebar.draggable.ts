@@ -31,7 +31,7 @@ export class SidebarMod {
             $('.flyer-element-blank').css({ 'z-index': 1 });
 
             //TODO: dapat i refactor ni nga mga classes
-            var element_classes = '.flyer-element-stills, .flyer-element-text, .flyer-element-textarea, .flyer-element-static, ' +
+            var element_classes = '.flyer-element-stills, .flyer-element-text, .flyer-element-textarea, .flyer-element .flyer-element-static, ' +
                '.flyer-element-agent, .flyer-element-logo, .flyer-element-realtor, .flyer-element-eho,' +
                '.flyer-element-qr, .flyer-element-bullet';
 

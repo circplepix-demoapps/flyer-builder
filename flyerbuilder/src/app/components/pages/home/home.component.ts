@@ -113,7 +113,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
             })
 
             $(this).css({ 'cursor': 'move' });
-            
+
             selected_ui = $(this);
          },
          stop: function (e: any, ui: any) {
@@ -180,7 +180,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
             var element_id = generateUniqueID(15);
 
             //***************************************************************************************************/
-            //******* TODO: Kania nga if statements dapat ma simplify tne para dili murag dili spaghetti code lantawon 
+            //******* TODO: Kania nga if statements dapat ma simplify tne para dili murag dili spaghetti code lantawon
             //***************************************************************************************************/
             // if the element is a still
             if ($(active_element).hasClass(configConstant.FLYER_ELEMENT_STILL)) {
@@ -320,6 +320,18 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
                   'value': TestData.LOREM_IPSUM
                };
                $(active_element).attr('uuid', element_id);
+            }else if ($(active_element).hasClass(configConstant.FLYER_ELEMENT_TEXTAREA2)) {
+               drp_element = {
+                  'id': element_id,
+                  'type': ElementType.textarea2,
+                  'x': x,
+                  'y': y,
+                  'width': width,
+                  'height': height,
+                  'src': '',
+                  'value': TestData.LOREM_IPSUM
+               };
+               $(active_element).attr('uuid', element_id);
             }
 
             selected_ui = $(active_element);
@@ -438,7 +450,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       /**
        * search and set element dimensions
        * @param arr collection of dropped elements
-       * @param id 
+       * @param id
        */
       function updateElementDimensions(arr: any, element: any, id: any) {
          if(!arrDroppedElements && arrDroppedElements.length <= 0 ) {
@@ -470,7 +482,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       /**
        * search ang set element coordinates
        * @param arr collection of dropped elements
-       * @param id 
+       * @param id
        */
       function updateArrDroppedElementsCoord(arr: any, x: any, y: any, id: any) {
          if(!arrDroppedElements && arrDroppedElements.length <= 0 ) {
@@ -513,7 +525,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       /**
        * get selected element dimensions
-       * @param element 
+       * @param element
        */
       function getDimensions(element: any) {
          if (!element) {
