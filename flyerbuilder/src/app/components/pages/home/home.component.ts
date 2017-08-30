@@ -5,7 +5,7 @@ import { FlyerLocalStorage } from './../../../helpers/flyerLocalStorage';
 import { DialogService } from './../../../services/dialog.service';
 import { Component, OnInit, ViewEncapsulation, OnDestroy, AfterViewInit, AfterViewChecked, ViewChild, HostListener } from '@angular/core';
 import { SidebarMod } from './../../../shared/sidebar.draggable';
-
+import { MsgPrompts } from '../../../helpers/msgPrompts';
 declare var $: any;
 
 @Component({
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
    // TODO: set mechanism to save in localstorage
    setStorage() {
-      if(this.arrDroppedElements) {
+      if (this.arrDroppedElements) {
          this.flyerLocalStorage.setLocalStorage(JSON.stringify(this.arrDroppedElements));
       }
    }
@@ -77,6 +77,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       var generateUniqueID = this.generateUniqueID;
       var handleDroppedElement = this.handleDroppedElement;
       var arrDroppedElements = this.arrDroppedElements;
+      var msgPrompts = MsgPrompts;
 
       var ui_zindex = 2;
       var selected_ui: any;
@@ -165,9 +166,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
             active_element = $(active_element.outerHTML);
             active_element = $(active_element).draggable(draggableOption)
-                                              .resizable(resizableOption)
-                                              .css({ left: x, top: y })
-                                              .appendTo('.rsf-ruler .stage');
+               .resizable(resizableOption)
+               .css({ left: x, top: y })
+               .appendTo('.rsf-ruler .stage');
 
             //get positions
             $('#pos-x').val(y);
@@ -356,7 +357,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       $('#drg-flyer').draggable(draggableOption).resizable(resizableOption);
 
       $(document).on('blur', '#flyer-element-text', function () {
-         if(!arrDroppedElements && arrDroppedElements.length <= 0 ) {
+         if (!arrDroppedElements && arrDroppedElements.length <= 0) {
             return;
          }
 
@@ -427,9 +428,35 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
          return false;
       });
 
+      $(document).on('keyup', function (e: any) {
+         if (e.keyCode === 46) {
+            if (selected_ui) {
+               removeElement(selected_ui);
+            } else {
+               alert(MsgPrompts.msg(1));
+            }
+         }
+      })
+
+      //TODO: on progress
+      $(document).on('mousedown', '.flyer-element',  function (e: any) {
+         if (e.button == 2) {
+            console.log('Right mouse button!');
+            return false;
+         }
+         return true;
+      });
+
       /******************************************************************************************
       * functions
       /*******************************************************************************************/
+
+      function removeElement(el: any) {
+         if (confirm("Are you sure to remove this element?")) {
+            el.remove();
+            selected_ui = null;
+         }
+      }
 
       function addHighlight(el: any) {
          removeHighlight();
@@ -444,6 +471,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       function removeHighlight() {
          $('.flyer-element').each(function () {
             $(this).removeClass('selected-element');
+            selected_ui = null;
          })
       }
 
@@ -453,7 +481,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
        * @param id
        */
       function updateElementDimensions(arr: any, element: any, id: any) {
-         if(!arrDroppedElements && arrDroppedElements.length <= 0 ) {
+         if (!arrDroppedElements && arrDroppedElements.length <= 0) {
             return;
          }
          $.each(arrDroppedElements, function () {
@@ -467,7 +495,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       }
 
       function updateArrDroppedElementText(arr: any, textValue: any, id: any) {
-         if(!arrDroppedElements && arrDroppedElements.length <= 0 ) {
+         if (!arrDroppedElements && arrDroppedElements.length <= 0) {
             return;
          }
          $.each(arrDroppedElements, function () {
@@ -485,7 +513,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
        * @param id
        */
       function updateArrDroppedElementsCoord(arr: any, x: any, y: any, id: any) {
-         if(!arrDroppedElements && arrDroppedElements.length <= 0 ) {
+         if (!arrDroppedElements && arrDroppedElements.length <= 0) {
             return;
          }
          $.each(arrDroppedElements, function () {
