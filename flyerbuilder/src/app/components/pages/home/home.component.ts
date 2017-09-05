@@ -8,6 +8,9 @@ import { SidebarMod } from './../../../shared/sidebar.draggable';
 import { MsgPrompts } from '../../../helpers/msgPrompts';
 declare var $: any;
 
+import { TextControlPanelComponent } from '../text-control-panel/text-control-panel.component';
+
+
 @Component({
    moduleId: module.id,
    templateUrl: 'home.component.html',
@@ -25,6 +28,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
    /* Define Test data here
    //***************************************/
    public flyerLayouts: any[] = TestData.FLYER_LAYOUTS;
+
+   selectedElement: any = null;
 
    constructor(private dialogsService: DialogService, private flyerLocalStorage: FlyerLocalStorage) {
    }
@@ -180,7 +185,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
             var element_id = generateUniqueID(15);
 
             //***************************************************************************************************/
-            //******* TODO: Kania nga if statements dapat ma simplify tne para dili murag dili spaghetti code lantawon 
+            //******* TODO: Kania nga if statements dapat ma simplify tne para dili murag dili spaghetti code lantawon
             //***************************************************************************************************/
             // if the element is a still
             if ($(active_element).hasClass(configConstant.FLYER_ELEMENT_STILL)) {
@@ -465,7 +470,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       /**
        * search and set element dimensions
        * @param arr collection of dropped elements
-       * @param id 
+       * @param id
        */
       function updateElementDimensions(arr: any, element: any, id: any) {
          if (!arrDroppedElements && arrDroppedElements.length <= 0) {
@@ -497,7 +502,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       /**
        * search ang set element coordinates
        * @param arr collection of dropped elements
-       * @param id 
+       * @param id
        */
       function updateArrDroppedElementsCoord(arr: any, x: any, y: any, id: any) {
          if (!arrDroppedElements && arrDroppedElements.length <= 0) {
@@ -540,7 +545,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       /**
        * get selected element dimensions
-       * @param element 
+       * @param element
        */
       function getDimensions(element: any) {
          if (!element) {
@@ -612,6 +617,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
          }, 600);
       }
 
+      //Use the selected_ui the way hero component uses selected hero -- set the selectedText of textcontrolpanel.
+      this.selectedElement = selected_ui;
    }
 
    ngOnDestroy() { }

@@ -48,11 +48,14 @@
 
    </div>
 
+   <!-- Font Styling Controls -->
+   <app-text-control-panel [textElement]="setTextElement(selectedElement)"></app-text-control-panel>
+
    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 right-nav-container prop-outer-container "></div>
    <div class="mdc-layout-grid build-flyer-container">
       <a md-button class="btn-build-pdf" [routerLink]="['pdf-previewer']" (click)="setStorage()" target="_blank" title="Click To Build Flyer">
          <i class="material-icons">check_circle</i> <span>PDF Preview</span>
       </a>
    </div>
-   
+
 </md-card>

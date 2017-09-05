@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule, MdButtonModule, MdTabsModule, MdSelect, MdOption, MdInputModule } from '@angular/material';
 
 import 'hammerjs';
+import { TextControlPanelComponent } from './components/pages/text-control-panel/text-control-panel.component';
 
 const rootRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +25,7 @@ const rootRoutes: Routes = [
 ]
 
 @NgModule({
-   imports:[ 
+   imports:[
       BrowserModule,
       BrowserAnimationsModule,
       MaterialModule,
@@ -33,10 +34,10 @@ const rootRoutes: Routes = [
       MdInputModule,
       HttpModule,
       DialogsModule,
-      
+
       RouterModule.forRoot(rootRoutes),
    ],
-   declarations: [ AppComponent, HomeComponent, SidenavComponent, HeaderComponent, PDFPreviewer, SafePipe ],
+   declarations: [ AppComponent, HomeComponent, SidenavComponent, HeaderComponent, PDFPreviewer, SafePipe, TextControlPanelComponent ],
    providers: [ PDFGenerator, FlyerLocalStorage ],
    bootstrap: [ AppComponent ]
 })

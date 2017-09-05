@@ -15,7 +15,7 @@ export class ConfigConstant {
    public static EHO_HTML: string = '<div class="ui-widget-content flyer-element flyer-element-eho" title="Double Click To Select"><span></span><div class="ui-resizable-handle ui-resizable-se segrip"></div></div>';
    public static QR_HTML: string = '<div class="ui-widget-content flyer-element flyer-element-qr" title="Double Click To Select"><span></span><div class="ui-resizable-handle ui-resizable-se segrip"></div></div>';
    public static BULLET_HTML: string = '<div class="ui-widget-content flyer-element flyer-element-bullet" title="Double Click To Select"><span></span><div class="ui-resizable-handle ui-resizable-se segrip"></div></div>';
-   
+
    public static STILL_DEFAULT_IMAGE: string = '../../assets/img/default-still.jpg';
    public static BLANK_DEFAULT_IMAGE: string = '../../assets/img/TEST_BLANK.jpg';
    public static STATIC_DEFAULT_IMAGE: string = '../../assets/img/default-static.gif';
