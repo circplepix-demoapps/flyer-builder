@@ -1,11 +1,18 @@
-<!-- <div *ngIf="textElement.isSet"> -->
+<div *ngIf="uuid">
   <md-toolbar>
     <span>Text Control Panel</span>
   </md-toolbar>
 
   <div class="input-props mdc-layout-grid">
     <div class="mdc-layout-grid__cell--span-12">
-      <input id="select-flyer-layout" placeholder="Soeme Font"/>
+      <p>UUID: {{uuid}}</p>
+      <!-- <h6 (click)="textElement.font = textElement.font + 'a'">Font: {{textElement.font}}</h6>
+      <h6 (click)="textElement.color = textElement.color + 'b'">Color: {{textElement.color}}</h6>
+      <h6 (click)="textElement.fontSize = textElement.fontSize + 1">Size: {{textElement.fontSize}}</h6>
+      <h6 (click)="textElement.charLimit = textElement.charLimit + 1">Limit: {{textElement.charLimit}}</h6>
+      <h6 (click)="textElement.replacementTextOn = replacementTextOn? false: true">Replace?: {{textElement.replacementTextOn}}</h6>
+      <h6 (click)="textElement.isSet = isSet? false: true">Is Set?: {{textElement.isSet}}</h6> -->
+      <!-- <input id="select-flyer-layout" placeholder="Soeme Font"/> -->
     </div>
   </div>
-<!-- </div> -->
+</div>

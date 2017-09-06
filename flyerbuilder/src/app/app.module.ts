@@ -8,6 +8,7 @@ import { DialogsModule } from './shared/dialog/dialog.module';
 import { HeaderComponent } from './components/pages/header/header.component';
 import { SidenavComponent } from './components/pages/sidenav/sidenav.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { TextControlPanelComponent } from './components/pages/text-control-panel/text-control-panel.component';
 import { NgModule, Pipe, PipeTransform }      from '@angular/core';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,7 +17,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule, MdButtonModule, MdTabsModule, MdSelect, MdOption, MdInputModule } from '@angular/material';
 
 import 'hammerjs';
-import { TextControlPanelComponent } from './components/pages/text-control-panel/text-control-panel.component';
 
 const rootRoutes: Routes = [
   { path: '', component: HomeComponent },

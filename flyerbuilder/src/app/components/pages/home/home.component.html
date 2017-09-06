@@ -48,8 +48,10 @@
 
    </div>
 
+   <p>UUID in Home Component: {{selectedElementUUID}}</p>
+
    <!-- Font Styling Controls -->
-   <app-text-control-panel [textElement]="setTextElement(selectedElement)"></app-text-control-panel>
+   <app-text-control-panel [id]="selectedElementUUID"></app-text-control-panel>
 
    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 right-nav-container prop-outer-container "></div>
    <div class="mdc-layout-grid build-flyer-container">

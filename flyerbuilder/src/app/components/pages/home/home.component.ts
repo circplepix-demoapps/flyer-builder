@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
    //***************************************/
    public flyerLayouts: any[] = TestData.FLYER_LAYOUTS;
 
-   selectedElement: any = null;
+   public selectedElementUUID: any;
 
    constructor(private dialogsService: DialogService, private flyerLocalStorage: FlyerLocalStorage) {
    }
@@ -43,6 +43,10 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       }
    }
 
+   updateSelectedElementUUID = (id: number) =>  {
+      this.selectedElementUUID = id;
+   }
+   
    removeStorage() {
       this.flyerLocalStorage.removeStorage(ConfigConstant.FLYER_STORAGE_KEY);
    }
@@ -83,6 +87,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       var handleDroppedElement = this.handleDroppedElement;
       var arrDroppedElements = this.arrDroppedElements;
       var msgPrompts = MsgPrompts;
+      var updateSelectedElementUUID = this.updateSelectedElementUUID;
 
       var ui_zindex = 2;
       var selected_ui: any;
@@ -149,6 +154,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
             $('#input-element-width').val(getDimensions($(selected_element)).width);
 
             $(selected_element).addClass('selected-element');
+
+            updateSelectedElementUUID(selected_ui.attr('uuid'));
          }
       }
 
@@ -329,18 +336,21 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
             selected_ui = $(active_element);
 
+            updateSelectedElementUUID(selected_ui.attr('uuid'));
+
             removeHighlight();
 
             handleDroppedElement(drp_element, arrDroppedElements)
          }
       }
-
       var resizableOption = {
          containment: $('.rsf-ruler'), handles: { se: '.segrip' },
          resize: function () {
             $('#input-element-height').val(getDimensions($(selected_ui)).height);
             $('#input-element-width').val(getDimensions($(selected_ui)).width);
 
+            updateSelectedElementUUID(selected_ui.attr('uuid'));
+            
             updateElementDimensions(arrDroppedElements, $(this), $(this).attr('uuid'))
          }
       }
@@ -617,8 +627,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
          }, 600);
       }
 
-      //Use the selected_ui the way hero component uses selected hero -- set the selectedText of textcontrolpanel.
-      this.selectedElement = selected_ui;
    }
 
    ngOnDestroy() { }
