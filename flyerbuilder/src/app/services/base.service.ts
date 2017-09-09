@@ -44,7 +44,6 @@ export class BaseApiService {
 	protected delete(endpoint: string) {
 		return this.request(endpoint, RequestMethod.Delete);
 	}
-
 	/**
 	 * 
 	 * @param endpoint endpoint
@@ -73,6 +72,5 @@ export class BaseApiService {
 	protected handleServerError(error: any) {
 		return Observable.throw('An error occured while processing request.');
 	}
-
 
 }

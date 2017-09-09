@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
+<<<<<<< HEAD
 ## Setup and Installation
 
 1. Be sure to install angular CLI locally and globally - NOTE: If having problems on CLI, follow the instructions in the github CLI
@@ -28,4 +29,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
      ng serve
    ``` 
 
+=======
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+>>>>>>> e1cced73d3485e668476c69e2647e07f39757310
 

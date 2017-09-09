@@ -26,7 +26,11 @@ export class ConfigConstant {
    public static QR_DEFAULT_IMAGE: string = '../../assets/img/default-qr.png';
    public static BULLET_DEFAULT_IMAGE: string = '../../assets/img/default-bullet.png';
 
+<<<<<<< HEAD
    public static FLYER_ELEMENT_BLANK: string = 'flyer-element-blank';
+=======
+   public static FLYER_BLANK_CLASS: string = 'flyer-element-blank';
+>>>>>>> e1cced73d3485e668476c69e2647e07f39757310
    public static FLYER_ELEMENT_STILL: string = 'flyer-element-stills';
    public static FLYER_ELEMENT_TEXT: string = 'flyer-element-text';
    public static FLYER_ELEMENT_TEXTAREA: string = 'flyer-element-textarea';

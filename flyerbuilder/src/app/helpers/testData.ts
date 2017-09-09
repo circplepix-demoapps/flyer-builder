@@ -2,7 +2,11 @@ export class TestData {
    public static FLYER_LAYOUTS: any[] = [
       { 'name': 'Flyer' },
       { 'name': 'Doorhanger' },
+<<<<<<< HEAD
       { 'name': 'Postcard' }
+=======
+      { 'name': 'Posted' }
+>>>>>>> e1cced73d3485e668476c69e2647e07f39757310
    ]
 
    public static SIDEBAR_ELEMENTS: any[] = [
