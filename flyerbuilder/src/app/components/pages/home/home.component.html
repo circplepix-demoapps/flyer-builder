@@ -1,0 +1,58 @@
+<ai-header></ai-header>
+
+<ai-sidenav></ai-sidenav>
+
+<div class="main">
+   <div id="wrapper">
+      <div id="drg-flyer" class="ui-widget-content flyer-element flyer-element-blank">
+         <div class="ui-resizable-handle ui-resizable-se segrip"></div>
+      </div>
+   </div>
+</div>
+
+<md-card id="right-nav" class="mdc-layout-grid right-nav">
+   <md-toolbar>
+      <span>Properties</span>
+   </md-toolbar>
+
+   <div class="input-props mdc-layout-grid">
+      <div class="mdc-layout-grid__cell--span-12">
+         <md-select id="select-flyer-layout" mdSelect placeholder="Flyer Layout">
+            <md-option mdOption *ngFor="let layout of flyerLayouts" [value]="layout.name[0]">{{ layout.name }}</md-option>
+         </md-select>
+      </div>
+
+      <div class="mdc-layout-grid__cell--span-6">
+         <md-input-container class="md-icon-float">
+            <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+            <input id="pos-x" class="input-icon" maxlength="6" mdInput placeholder="X (Pixels)">
+         </md-input-container>
+
+         <md-input-container>
+            <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+            <input id="input-element-width" class="input-icon" maxlength="6" mdInput placeholder="Width">
+         </md-input-container>
+      </div>
+
+      <div class="mdc-layout-grid__cell--span-6">
+         <md-input-container>
+            <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+            <input id="pos-y" class="input-icon" maxlength="6" mdInput placeholder="Y (Pixels)">
+         </md-input-container>
+
+         <md-input-container>
+            <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+            <input id="input-element-height" maxlength="6" class="input-icon" mdInput placeholder="Height">
+         </md-input-container>
+      </div>
+
+   </div>
+
+   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 right-nav-container prop-outer-container "></div>
+   <div class="mdc-layout-grid build-flyer-container">
+      <a md-button class="btn-build-pdf" [routerLink]="['pdf-previewer']" (click)="setStorage()" target="_blank" title="Click To Build Flyer">
+         <i class="material-icons">check_circle</i> <span>PDF Preview</span>
+      </a>
+   </div>
+   
+</md-card>
