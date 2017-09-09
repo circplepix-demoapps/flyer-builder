@@ -9,8 +9,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-    headerTitle = 'Flyer Builder - Demo Version';
-
+    headerTitle = 'Flyer Builder Demo - Prototype Version';
+    
     constructor() { }
 
     ngOnInit() { }
