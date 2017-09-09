@@ -1,0 +1,90 @@
+
+nav .mat-toolbar-row {
+    height: 50px !important;
+}
+
+nav .mat-toolbar {
+   min-height: 50px !important;
+   background: #018c57;
+   color:#FFF;
+   border-bottom: thin #ddd solid;
+}
+
+
+nav .mat-tab-body-wrapper {
+  height:100vh;
+}
+
+nav .mat-ink-bar {
+  background-color: #FFF !important;
+}
+
+nav .mat-tab-label {
+   min-width: 90px !important;
+   color:#FFF !important;
+}
+
+nav {
+   background-color: #018c57;
+   display: inline-block;
+   position: fixed;
+   height: 92.1vh;
+   width: 200px;
+   left: -198px;
+   -webkit-transition: -webkit-transform 0.3s;
+   transition: transform 0.3s;
+   top:73px;
+}
+
+nav .mat-button {
+  color:#FFF !important;
+}
+
+nav .mat-button:hover {
+  background:transparent !important;
+}
+
+nav .icon > i {
+  display: block;
+  margin: 0 auto;
+}
+
+nav .tool-card {
+  width:200px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  text-align: left !important;
+  color:#FFF;
+  padding: 5px 0;
+  width: 100%;
+}
+
+nav a:hover { background-color: transparent; }
+
+nav a:visited { color: #FFF; }
+
+nav a.active {
+  background-color: transparent;
+  color: white;
+}
+
+nav, .hamburger, .cover {
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+}
+
+.sidenav-active nav, .sidenav-active .hamburger, .sidenav-active .cover {
+  -webkit-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  transform: translateX(200px);
+}
+
+.btn-elements-text {
+  position: relative;
+  top:-5px;
+}
+
+

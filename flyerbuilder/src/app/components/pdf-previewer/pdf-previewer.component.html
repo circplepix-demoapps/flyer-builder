@@ -1,0 +1,19 @@
+<div class="mdc-layout-grid" style="padding:10px;">
+   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+     <h2 style="margin:5px 0">Flyer Preview</h2>
+   </div>
+
+</div>
+
+<div *ngIf="dataUrl; else error_notice">
+   <iframe id="iframe-previewer" [src]="dataUrl | safe" height="100%" width="100%"></iframe>
+</div>
+
+<ng-template #error_notice>
+   <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+         <h2><i class="material-icons">error_outline</i> Processing request.</h2>
+         <p>{{ this.errorMessage }}</p>
+      </div>
+   </div>
+</ng-template>
